@@ -791,7 +791,7 @@ function obtenerCategorias() {
             categorias.push(p.categoria);
         }
     });
-    return categorias.sort();
+    return categorias.sort(function(a, b) { return a.localeCompare(b); });
 }
 
 function filtrarPiezas(texto, categoria) {
